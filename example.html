@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swipe Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    
+    #container {
+        width: 400px;
+        height: 200px;
+        font-size: 80px;
+        text-align: center;
+        border: 10px solid blue;
+        background-color: lightgrey;
+    }
+    
+    </style>
+
+    <script type='text/javascript' src='./swipe.js'></script>
+
+  </head>
+  <body>
+    <div id="container">
+    </div>
+    <script>
+
+        function onLeft(){
+            document.getElementById("container").innerHTML = "LEFT";
+        }
+
+        function onRight(){
+            document.getElementById("container").innerHTML = "RIGHT";
+        }
+
+        function onUp(){
+            document.getElementById("container").innerHTML = "UP";
+        }
+
+        function onDown(){
+            document.getElementById("container").innerHTML = "DOWN";
+        }
+
+        var sw = new Swipe(document.getElementById("container"),onLeft,onRight,onUp,onDown);
+        
+    </script>
+  </body>
+</html>
+
