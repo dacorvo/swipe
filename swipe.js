@@ -39,6 +39,7 @@ function Swipe(element,onLeft,onRight,onUp,onDown) {
     this.onUp = onUp;
     this.onDown = onDown;
 	this.reset();
+    this.element = element;
     // Local variable to pass ourself to event callbacks
     var _self = this;
     // Capture touchstart event
@@ -79,7 +80,7 @@ function Swipe(element,onLeft,onRight,onUp,onDown) {
         function(event){
             if( _self.curX != 0 ) {
                 // Only trigger an event if the swipe is long enough 
-                if ( _self.getSwipeLength() >= _self.minLength ) {
+                if (_self.getSwipeLength() >= Swipe.MIN_LENGTH) {
                     event.preventDefault();
                     var angle = _self.getSwipeAngle();
                     var direction = _self.getSwipeDirection(angle);
