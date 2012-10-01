@@ -1,7 +1,9 @@
-# A simple script to add swipe events to a web page
+#swipe.js 
+A simple script to add swipe events to a web page
 
 ##Usage
 
+`
 function onLeft() {
 	// Do something when the user swiped left
 }
@@ -11,6 +13,7 @@ function onLeft() {
 var target = document.getElementById("myElt");
 
 sw = new Swipe(target,onLeft,onRight,onUp,onDown);
+`
 
 ##Demo
 
