@@ -39,7 +39,6 @@ function Swipe(element,onLeft,onRight,onUp,onDown) {
     this.onUp = onUp;
     this.onDown = onDown;
 	this.reset();
-    this.element = element;
     // Local variable to pass ourself to event callbacks
     var _self = this;
     // Capture touchstart event
